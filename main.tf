@@ -18,3 +18,19 @@ resource "azurerm_resource_group" "dev-rg" {
     environment = "dev"
   }
 }
+
+resource "azurerm_virtual_network" "dev-vn" {
+  name                = "dev-network"
+  resource_group_name = azurerm_resource_group.dev-vn.name
+  location            = azurerm_resource_group.dev-vn.location
+  address_space       = ["10.123.0.0/16"]
+
+  subnet {
+    name           = "dev-subnet"
+    address_prefix = ["10.123.1.0/24"]
+  }
+
+  tags = {
+    environment = "dev"
+  }
+}
