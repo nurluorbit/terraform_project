@@ -7,4 +7,4 @@
 ---
 ## Required Steps
 - App registrations --> create a application
-- Access control (IAM) --> create a contributor role
+- Access control (IAM) --> create a contributor role (az cli or az portal)
