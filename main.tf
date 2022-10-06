@@ -48,9 +48,7 @@ resource "azurerm_kubernetes_cluster" "dev-aks" {
     cluster_name = "devaks-k8s"
     }
 
-  role_based_access_control {
-    enabled = true
-  }
+  role_based_access_control_enabled = true
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "dev-aks" {
