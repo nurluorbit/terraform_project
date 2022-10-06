@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "dev-aks" {
   dns_prefix          = "devaks"
 
   default_node_pool {
-    name       = "devagent_system"
+    name       = "devagentsys"
     node_count = 1
     vm_size    = "Standard_D2_v2"
 
@@ -54,7 +54,7 @@ resource "azurerm_kubernetes_cluster" "dev-aks" {
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "dev-aks" {
-  name                  = "devagent_user"
+  name                  = "devagentuser"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.dev-aks.id
   vm_size               = "Standard_DS2_v2"
   node_count            = 1
