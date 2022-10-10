@@ -1,3 +1,3 @@
 # terraform_project
 
-- Terraform project which creates an environment on Microsoft Azure.
+Terraform project which creates an environment on Microsoft Azure.
